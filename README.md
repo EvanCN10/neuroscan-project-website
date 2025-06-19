@@ -1,1 +1,1 @@
-# aerobara-project-website
+# neuroscan-project-website
