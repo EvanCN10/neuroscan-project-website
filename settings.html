@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScan - Settings</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <span class="logo-text">NeuroScan</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Riwayat</span>
+                </a>
+                <a href="helpdesk.html" class="nav-item">
+                    <span class="nav-icon">❓</span>
+                    <span class="nav-text">Help Desk</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">🚪</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search anything...">
+                    </div>
+                </div>
+
+                <div class="user-section">
+                    <div class="user-info">
+                        <span class="welcome-text">Hi, Welcome Back</span>
+                        <span class="user-name">Greg Jonas</span>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Content -->
+            <div class="settings-content">
+                <!-- Account Settings Section -->
+                <div class="settings-section">
+                    <h2 class="section-title">Account Settings</h2>
+
+                    <div class="settings-group">
+                        <div class="setting-item clickable" onclick="openProfileDetails()">
+                            <div class="setting-info">
+                                <div class="setting-icon">👤</div>
+                                <span class="setting-label">Profile Details</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+
+                        <div class="setting-item clickable" onclick="openEmailSettings()">
+                            <div class="setting-info">
+                                <div class="setting-icon">📧</div>
+                                <span class="setting-label">Email</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+
+                        <div class="setting-item clickable" onclick="openPasswordSettings()">
+                            <div class="setting-info">
+                                <div class="setting-icon">🔒</div>
+                                <span class="setting-label">Password</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+
+                        <div class="setting-item clickable" onclick="openNotificationSettings()">
+                            <div class="setting-info">
+                                <div class="setting-icon">🔔</div>
+                                <span class="setting-label">Notification</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Section -->
+                <div class="settings-section">
+                    <h2 class="section-title">Visual</h2>
+
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-icon">🌙</div>
+                                <span class="setting-label">Dark Theme</span>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="darkTheme" checked onchange="toggleDarkTheme()">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accessibility Section -->
+                <div class="settings-section">
+                    <h2 class="section-title">Accessibility</h2>
+
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-icon">🔊</div>
+                                <span class="setting-label">Text to Speech</span>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="textToSpeech" checked onchange="toggleTextToSpeech()">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-icon">💬</div>
+                                <span class="setting-label">Dyslexic</span>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="dyslexicMode" checked onchange="toggleDyslexicMode()">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Others Section -->
+                <div class="settings-section">
+                    <h2 class="section-title">Others</h2>
+
+                    <div class="settings-group">
+                        <div class="setting-item clickable" onclick="openAboutApplication()">
+                            <div class="setting-info">
+                                <div class="setting-icon">ℹ️</div>
+                                <span class="setting-label">About Application</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+
+                        <div class="setting-item clickable" onclick="openHelpFAQ()">
+                            <div class="setting-info">
+                                <div class="setting-icon">❓</div>
+                                <span class="setting-label">Help/FAQ</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+
+                        <div class="setting-item clickable danger" onclick="openDeactivateAccount()">
+                            <div class="setting-info">
+                                <div class="setting-icon">🗑️</div>
+                                <span class="setting-label">Deactivate my account</span>
+                            </div>
+                            <div class="setting-arrow">›</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/settings.js"></script>
+</body>
+
+</html>

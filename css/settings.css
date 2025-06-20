@@ -1,0 +1,503 @@
+/* Settings Page Specific Styles */
+
+.settings-content {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Arial", sans-serif;
+    /* Consistent with other pages */
+}
+
+/* Settings Sections */
+.settings-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d5a52;
+    /* Consistent with NeuroScan theme */
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+}
+
+/* Settings Groups */
+.settings-group {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Setting Items */
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    font-family: "Arial", sans-serif;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item.clickable {
+    cursor: pointer;
+}
+
+.setting-item.clickable:hover {
+    background: rgba(78, 205, 196, 0.05);
+    /* NeuroScan theme color */
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.setting-icon {
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d5a52;
+    /* Consistent with NeuroScan theme */
+    font-family: "Arial", sans-serif;
+}
+
+.setting-arrow {
+    font-size: 20px;
+    color: #4ecdc4;
+    /* NeuroScan accent color */
+    font-weight: 300;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked+.toggle-slider {
+    background-color: #4ecdc4;
+    /* NeuroScan theme color */
+}
+
+input:focus+.toggle-slider {
+    box-shadow: 0 0 1px #4ecdc4;
+}
+
+input:checked+.toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Hover effects */
+.toggle-switch:hover .toggle-slider {
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.3);
+}
+
+/* Active states */
+.setting-item.active {
+    background: rgba(78, 205, 196, 0.05);
+    border-left: 4px solid #4ecdc4;
+}
+
+/* Danger setting item */
+.setting-item.danger .setting-label {
+    color: #dc3545;
+}
+
+.setting-item.danger .setting-icon {
+    color: #dc3545;
+}
+
+.setting-item.danger:hover {
+    background: rgba(220, 53, 69, 0.05);
+}
+
+/* Modal styles with consistent fonts */
+.modal-content {
+    font-family: "Arial", sans-serif;
+}
+
+.modal-header h3 {
+    color: #2d5a52;
+    font-family: "Arial", sans-serif;
+}
+
+.modal-body {
+    font-family: "Arial", sans-serif;
+}
+
+.modal-body h4 {
+    color: #2d5a52;
+    font-family: "Arial", sans-serif;
+}
+
+.modal-body p,
+.modal-body li {
+    color: #666;
+    font-family: "Arial", sans-serif;
+}
+
+/* Button styles */
+.btn-confirm-danger,
+.btn-confirm-cancel {
+    font-family: "Arial", sans-serif;
+}
+
+/* Form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    font-family: "Arial", sans-serif;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #2d5a52;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .settings-content {
+        padding: 20px 15px;
+        max-width: none;
+    }
+
+    .settings-section {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-content {
+        padding: 15px 10px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .setting-item {
+        padding: 14px 16px;
+    }
+
+    .setting-label {
+        font-size: 15px;
+    }
+
+    .setting-icon {
+        font-size: 16px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .toggle-switch {
+        width: 44px;
+        height: 22px;
+    }
+
+    .toggle-slider:before {
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked+.toggle-slider:before {
+        transform: translateX(22px);
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-content {
+        padding: 10px 5px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .setting-item {
+        padding: 12px 14px;
+    }
+
+    .setting-label {
+        font-size: 14px;
+    }
+
+    .setting-info {
+        gap: 10px;
+    }
+
+    .setting-icon {
+        font-size: 14px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .toggle-switch {
+        width: 40px;
+        height: 20px;
+    }
+
+    .toggle-slider:before {
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked+.toggle-slider:before {
+        transform: translateX(20px);
+    }
+}
+
+/* Animation for settings changes */
+.setting-item.changed {
+    animation: settingChanged 0.6s ease-out;
+}
+
+@keyframes settingChanged {
+    0% {
+        background: rgba(78, 205, 196, 0.2);
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+/* Loading states */
+.setting-item.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.setting-item.loading::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e9ecef;
+    border-top: 2px solid #4ecdc4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success states */
+.setting-item.success {
+    border-left: 4px solid #28a745;
+    background: rgba(40, 167, 69, 0.05);
+}
+
+/* Error states */
+.setting-item.error {
+    border-left: 4px solid #dc3545;
+    background: rgba(220, 53, 69, 0.05);
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-theme .settings-group {
+    background: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .setting-item {
+    border-bottom-color: #404040;
+}
+
+body.dark-theme .setting-item.clickable:hover {
+    background: #3a3a3a;
+}
+
+body.dark-theme .section-title {
+    color: #ffffff;
+}
+
+body.dark-theme .setting-label {
+    color: #ffffff;
+}
+
+body.dark-theme .setting-arrow {
+    color: #4ecdc4;
+}
+
+/* Confirmation dialog styles */
+.confirmation-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-family: "Arial", sans-serif;
+}
+
+.confirmation-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    padding: 24px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+
+.confirmation-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d5a52;
+    margin-bottom: 12px;
+    font-family: "Arial", sans-serif;
+}
+
+.confirmation-message {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-family: "Arial", sans-serif;
+}
+
+/* Touch-friendly settings items */
+@media (hover: none) and (pointer: coarse) {
+    .setting-item.clickable {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    .setting-item.clickable:active {
+        background: rgba(78, 205, 196, 0.1);
+        transform: scale(0.98);
+    }
+
+    .toggle-switch {
+        min-width: 50px;
+        min-height: 30px;
+    }
+}
+
+/* Accessibility focus indicators */
+.setting-item:focus-within {
+    outline: 2px solid #4ecdc4;
+    outline-offset: 2px;
+}
+
+.toggle-switch input:focus+.toggle-slider {
+    outline: 2px solid #4ecdc4;
+    outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .settings-group {
+        border: 2px solid #2d5a52;
+    }
+
+    .setting-item {
+        border-bottom: 2px solid #2d5a52;
+    }
+
+    .toggle-slider {
+        border: 2px solid #2d5a52;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .setting-item,
+    .toggle-slider,
+    .toggle-slider:before {
+        transition: none;
+    }
+
+    .setting-item.changed {
+        animation: none;
+    }
+}

@@ -160,32 +160,36 @@ function handleScanNow() {
 
 // Handle navigation
 function handleNavigation(event) {
+  // Don't prevent default for direct href links
+  const href = event.currentTarget.getAttribute("href")
+
+  if (href && href !== "#") {
+    // Let the browser handle the navigation naturally
+    return
+  }
+
+  // Only prevent default and handle manually if no href
   event.preventDefault()
-
-  // Remove active class from all nav items
-  document.querySelectorAll(".nav-item").forEach((item) => {
-    item.classList.remove("active")
-  })
-
-  // Add active class to clicked item
-  event.currentTarget.classList.add("active")
 
   const navText = event.currentTarget.querySelector(".nav-text").textContent
   console.log(`Navigating to: ${navText}`)
 
-  // Here you would implement actual navigation
+  // Navigate based on selection
   switch (navText) {
+    case "Home":
+      window.location.href = "dashboard.html"
+      break
     case "Profile":
       window.location.href = "profile.html"
       break
-    case "Ringkasan":
-      alert("Navigating to Summary page")
+    case "Riwayat":
+      window.location.href = "riwayat.html"
       break
     case "Help Desk":
-      alert("Navigating to Help Desk")
+      window.location.href = "helpdesk.html"
       break
     case "Settings":
-      alert("Navigating to Settings")
+      window.location.href = "settings.html"
       break
     default:
       break
@@ -195,14 +199,14 @@ function handleNavigation(event) {
 // Handle video play
 function handleVideoPlay(event) {
   event.stopPropagation()
-  alert("Playing video...")
+  console.log("Playing video...")
   // Here you would implement video player functionality
 }
 
 // Handle article click
 function handleArticleClick(event) {
   const articleText = event.currentTarget.querySelector("p").textContent
-  alert(`Opening article: ${articleText}`)
+  console.log(`Opening article: ${articleText}`)
   // Here you would implement article navigation
 }
 
