@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroScan - Brain Scan</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/scan.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo-section">
+          <div class="logo">
+            <div class="logo-icon">🧠</div>
+            <span class="logo-text">NeuroScan</span>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="dashboard.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Profile</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">📊</span>
+            <span class="nav-text">Ringkasan</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">❓</span>
+            <span class="nav-text">Help Desk</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-text">Settings</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+          <div class="search-section">
+            <div class="search-bar">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Search anything..." />
+            </div>
+          </div>
+
+          <div class="user-section">
+            <div class="user-info">
+              <span class="welcome-text">Hi, Welcome Back</span>
+              <span class="user-name">Greg Jonas</span>
+            </div>
+            <div class="user-avatar">
+              <img
+                src="/placeholder.svg?height=40&width=40"
+                alt="User Avatar"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Scan Content -->
+        <div class="scan-content">
+          <div class="scan-area">
+            <div class="qr-scanner">
+              <div class="scanner-frame">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+              </div>
+              <p class="scan-instruction">Place QR Code inside this square</p>
+            </div>
+
+            <div class="scan-controls">
+              <div class="brain-scan-preview">
+                <img
+                  src="/placeholder.svg?height=80&width=80"
+                  alt="Brain Scan"
+                  class="brain-scan-image"
+                />
+              </div>
+
+              <div class="scan-actions">
+                <button class="scan-button" onclick="startScan()">
+                  <span class="scan-icon">📷</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scan.js"></script>
+  </body>
+</html>

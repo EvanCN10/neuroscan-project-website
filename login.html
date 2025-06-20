@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScan - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left-panel">
+            <div class="login-content">
+                <h1 class="welcome-title">Welcome</h1>
+                <p class="welcome-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                
+                <form class="login-form" onsubmit="handleLoginSubmit(event)">
+                    <div class="form-group">
+                        <label for="email">Email or Mobile Number</label>
+                        <input 
+                            type="text" 
+                            id="email" 
+                            name="email" 
+                            placeholder="example@example.com"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input-container">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="••••••••••"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword()">
+                                👁️
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms" class="checkbox-label">
+                            By continuing, you agree to our Terms of Service and Privacy Policy
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-login-submit">Log In</button>
+                </form>
+                
+                <div class="social-login">
+                    <p class="social-text">Or sign up with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+                            <span class="google-icon">G</span>
+                        </button>
+                        <button class="social-btn facebook-btn" onclick="handleFacebookLogin()">
+                            <span class="facebook-icon">f</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#" onclick="handleSignUpRedirect()">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-right-panel"></div>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>

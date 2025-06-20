@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroScan - Profile</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo-section">
+          <div class="logo">
+            <div class="logo-icon">🧠</div>
+            <span class="logo-text">NeuroScan</span>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="dashboard.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+          </a>
+          <a href="#" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Profile</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">📊</span>
+            <span class="nav-text">Ringkasan</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">❓</span>
+            <span class="nav-text">Help Desk</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-text">Settings</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+          <div class="search-section">
+            <div class="search-bar">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Search anything..." />
+            </div>
+          </div>
+
+          <div class="user-section">
+            <div class="user-info">
+              <span class="welcome-text">Hi, Welcome Back</span>
+              <span class="user-name">Greg Jonas</span>
+            </div>
+            <div class="user-avatar">
+              <img
+                src="/placeholder.svg?height=40&width=40"
+                alt="User Avatar"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+          <div class="profile-background">
+            <img
+              src="/placeholder.svg?height=400&width=800"
+              alt="Profile Background"
+              class="background-image"
+            />
+
+            <div class="edit-button">
+              <button class="btn-edit" onclick="editProfile()">Edit</button>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-avatar">
+                <img
+                  src="/placeholder.svg?height=120&width=120"
+                  alt="Greg Jonas"
+                  class="avatar-image"
+                />
+              </div>
+
+              <div class="profile-info">
+                <h2 class="profile-name">Greg Jonas</h2>
+
+                <div class="profile-bio">
+                  <p>
+                    Hi, I'm Greg — passionate about staying mentally sharp as I
+                    age. I've been tracking my cognitive health regularly and
+                    believe that a balanced lifestyle, good nutrition, and brain
+                    exercises make all the difference. Here's to a healthier
+                    brain, one day at a time.
+                  </p>
+                </div>
+
+                <div class="profile-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Age</span>
+                    <span class="stat-value">60</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Height</span>
+                    <span class="stat-value">180cm</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Weight</span>
+                    <span class="stat-value">67kg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>

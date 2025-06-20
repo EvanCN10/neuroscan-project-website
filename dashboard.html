@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScan - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <span class="logo-text">NeuroScan</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Ringkasan</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">❓</span>
+                    <span class="nav-text">Help Desk</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search anything...">
+                    </div>
+                </div>
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <span class="welcome-text">Hi, Welcome Back</span>
+                        <span class="user-name">Greg Jonas</span>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="content-grid">
+                    <!-- Brain Health Check Card -->
+                    <div class="card brain-health-card">
+                        <div class="card-content">
+                            <h3>Brain Health Check</h3>
+                            <p>Early Alzheimer's Detection</p>
+                            <button class="scan-btn">Scan Now</button>
+                        </div>
+                        <div class="card-icon">
+                            <div class="brain-scan-icon">🧠</div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Card -->
+                    <div class="card notification-card">
+                        <div class="notification-icon">🔔</div>
+                        <div class="notification-content">
+                            <p>Hi Greg, your cognitive has remained stable over the past 3 months. Great job!</p>
+                            <p>Keep maintaining a healthy lifestyle and regular brain exercises to support long-term cognitive health.</p>
+                        </div>
+                    </div>
+
+                    <!-- Health Analysis Chart -->
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3>Health Analysis</h3>
+                            <a href="#" class="view-details">View Details</a>
+                        </div>
+                        <div class="chart-section">
+                            <h4>Cognitive Activity Trend</h4>
+                            <div class="chart-container">
+                                <canvas id="cognitiveChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Assessment -->
+                    <div class="card risk-card">
+                        <div class="card-header">
+                            <h3>Risk Assessment Summary</h3>
+                            <a href="#" class="view-details">View Details</a>
+                        </div>
+                        <div class="risk-content">
+                            <div class="risk-chart">
+                                <canvas id="riskChart" width="150" height="150"></canvas>
+                                <div class="risk-center">
+                                    <span class="risk-percentage">65%</span>
+                                </div>
+                            </div>
+                            <div class="risk-info">
+                                <div class="risk-status">
+                                    <span class="status-label">Status</span>
+                                    <span class="status-value">Moderate Risk</span>
+                                </div>
+                                <div class="last-scan">
+                                    <span class="scan-label">Last Scan</span>
+                                    <span class="scan-date">May 20, 2026</span>
+                                </div>
+                                <div class="recommendation">
+                                    <span class="rec-label">Recommendation</span>
+                                    <span class="rec-text">Schedule a full cognitive assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Articles -->
+                    <div class="card articles-card">
+                        <h3>Latest Articles</h3>
+                        <div class="articles-grid">
+                            <div class="article-item">
+                                <img src="/placeholder.svg?height=100&width=150" alt="Article">
+                                <p>Understanding Early Signs of Alzheimer's</p>
+                            </div>
+                            <div class="article-item">
+                                <img src="/placeholder.svg?height=100&width=150" alt="Article">
+                                <p>Brain-Healthy Foods for Cognitive Decline</p>
+                            </div>
+                            <div class="article-item">
+                                <img src="/placeholder.svg?height=100&width=150" alt="Article">
+                                <p>What Happens to the Brain During Sleep</p>
+                            </div>
+                            <div class="article-item">
+                                <img src="/placeholder.svg?height=100&width=150" alt="Article">
+                                <p>The Importance of Mental Health and Depression</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Videos -->
+                    <div class="card videos-card">
+                        <h3>Latest Videos</h3>
+                        <div class="videos-grid">
+                            <div class="video-item">
+                                <div class="video-thumbnail">
+                                    <img src="/placeholder.svg?height=100&width=150" alt="Video">
+                                    <div class="play-button">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-item">
+                                <div class="video-thumbnail">
+                                    <img src="/placeholder.svg?height=100&width=150" alt="Video">
+                                    <div class="play-button">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-item">
+                                <div class="video-thumbnail">
+                                    <img src="/placeholder.svg?height=100&width=150" alt="Video">
+                                    <div class="play-button">▶️</div>
+                                </div>
+                            </div>
+                            <div class="video-item">
+                                <div class="video-thumbnail">
+                                    <img src="/placeholder.svg?height=100&width=150" alt="Video">
+                                    <div class="play-button">▶️</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
