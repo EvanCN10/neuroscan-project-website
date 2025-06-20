@@ -1,0 +1,268 @@
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.landing-left-panel {
+  width: 50%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px;
+}
+
+.landing-right-panel {
+  width: 50%;
+  height: 100vh;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.settings-icon,
+.phone-icon {
+  position: absolute;
+  top: 20px;
+  font-size: 24px;
+  color: #4a9b8e;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.settings-icon {
+  left: 20px;
+}
+
+.phone-icon {
+  right: 20px;
+}
+
+.settings-icon:hover,
+.phone-icon:hover {
+  opacity: 1;
+}
+
+.landing-content {
+  text-align: center;
+  z-index: 5;
+  max-width: 400px;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid #f0f0f0;
+}
+
+.logo-image {
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/neuroscan.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.medical-cross {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4444;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.brain-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #4a9b8e;
+  font-size: 24px;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #4a9b8e;
+}
+
+.title {
+  font-size: 42px;
+  color: #2d5a52;
+  margin-bottom: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #4a9b8e;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  width: 280px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-signup-main {
+  background: #4ecdc4;
+  color: white;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.btn-signup-main:hover {
+  background: #45b7aa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.btn-login-link {
+  background: transparent;
+  color: #2d5a52;
+  border: 2px solid #2d5a52;
+  font-size: 14px;
+}
+
+.btn-login-link:hover {
+  background: #2d5a52;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+  }
+
+  .landing-left-panel,
+  .landing-right-panel {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .landing-content {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .logo-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .medical-cross {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .brain-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 250px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 220px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
